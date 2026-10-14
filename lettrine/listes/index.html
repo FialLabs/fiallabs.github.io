@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lettrine — les listes de mots</title>
+<style>
+  body { margin: 0 auto; max-width: 42rem; padding: 2rem 1rem; color: #241C12; background: #EFE3CE;
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  h1 { font-size: 1.6rem; margin: 0 0 1rem; }
+  h2 { font-size: 1.1rem; margin: 1.75rem 0 .5rem; }
+  a { color: #3C6639; overflow-wrap: anywhere; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; }
+  th, td { text-align: left; padding: .4rem .5rem; border-bottom: 1px solid #5F544355; vertical-align: top; }
+  code { font-size: .8rem; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<h1>Lettrine — les listes de mots</h1>
+
+<p>Le jeu Lettrine de Fial Labs emploie trois listes de mots français. Ce sont ces fichiers,
+tels qu’ils voyagent dans l’application.</p>
+
+<h2>Les fichiers</h2>
+<table>
+  <tr><th>fichier</th><th>mots</th><th>SHA-256</th></tr>
+  <tr><td><a href="wiki-litt-10686.tsv">wiki-litt-10686.tsv</a></td><td>10 686</td><td><code>17c249cc02ad0f65a7e1a3e0460d52883f4cfa148882103ee3c4ae85bbd2dc23</code></td></tr>
+  <tr><td><a href="wiki-litt-15000.tsv">wiki-litt-15000.tsv</a></td><td>15 000</td><td><code>e1e23012d69d9f5e4cf8ddbf1a00954fcde33f1a8f31f627b56b3780f0278c71</code></td></tr>
+  <tr><td><a href="wiki-litt-20000.tsv">wiki-litt-20000.tsv</a></td><td>20 000</td><td><code>b90c7ab213cb9994544412673c5cf5206ef044faa0d3a35d18c310c899c000d6</code></td></tr>
+</table>
+<p>Texte UTF-8, une forme par ligne, trois colonnes séparées par une tabulation : la forme,
+sa clé (majuscules sans accent), sa fréquence (occurrences par million). Les lignes qui
+commencent par <code>#</code> sont l’en-tête.</p>
+
+<h2>D’où elles viennent</h2>
+<p>Elles sont dérivées du lexique Grammalecte, version 7.7 (Olivier R., grammalecte.net) :
+le lexique filtré et classé par Fial Labs le 6 octobre 2026. Le lexique d’origine :
+<a href="https://grammalecte.net/dic/lexique-grammalecte-fr-v7.7.zip">https://grammalecte.net/dic/lexique-grammalecte-fr-v7.7.zip</a>.</p>
+
+<h2>Leur licence</h2>
+<p>Le lexique Grammalecte est distribué sous la licence Mozilla Public License 2.0. Ces trois
+listes en sont dérivées et restent sous la licence Mozilla Public License 2.0 ; chacune porte
+la notice de la licence en tête. Le texte de la licence :
+<a href="https://mozilla.org/MPL/2.0/">https://mozilla.org/MPL/2.0/</a>.</p>
+</body>
+</html>
