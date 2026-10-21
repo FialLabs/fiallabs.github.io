@@ -57,7 +57,7 @@
 <body>
 <main>
   <h1>Lettrine — confidentialité et conditions</h1>
-  <p class="maj">Dernière mise à jour : 20 octobre 2026</p>
+  <p class="maj">Dernière mise à jour : 21 octobre 2026</p>
   <p class="langue"><a href="index.html" lang="en" hreflang="en">English version</a> — les deux versions disent la même chose ; la française a été écrite la première.</p>
 
   <nav>
@@ -71,10 +71,15 @@
   <div class="phrase">
     <p><strong>Lettrine ne vous demande rien, et nous ne gardons rien de vous.</strong>
     Tout ce que le jeu retient reste sur votre téléphone.</p>
-    <p><strong>Et tant que vous ne demandez pas d'annonce, rien ne sort de l'appareil.</strong>
+    <p><strong>Et le jeu n'envoie aucune de vos données de jeu.</strong>
+    Vos grilles, vos mots, votre jardin et vos réglages ne quittent pas votre téléphone.
     Contrairement à beaucoup de jeux, la régie publicitaire ne démarre pas au lancement :
     elle ne démarre qu'au moment où vous touchez la ligne qui propose un indice contre une
-    annonce. Si vous ne la touchez jamais, Lettrine ne contacte jamais le réseau.</p>
+    annonce. Si vous ne la touchez jamais, elle ne recueille rien.</p>
+    <p>Une réserve, que nous préférons écrire plutôt que taire : Lettrine s'affiche grâce à WebView,
+    un composant d'Android fourni et mis à jour par Google. Ce composant peut contacter Google pour
+    son propre compte, par exemple pour se configurer. Le jeu ne lui confie aucune donnée à
+    transmettre, et nous n'y avons pas la main.</p>
   </div>
 
   <h3>Qui publie Lettrine</h3>
@@ -82,6 +87,7 @@
 
   <h3>Ce que Lettrine collecte</h3>
   <p><strong>Fial Labs ne collecte rien.</strong> Le jeu ne demande ni compte, ni nom, ni adresse électronique, ni numéro de téléphone. Il ne demande ni votre position, ni vos contacts, ni vos photos, ni le micro, ni la caméra. Nous n'avons installé aucun outil de mesure d'audience, aucun rapporteur de plantage et aucun code de suivi qui nous soit propre.</p>
+  <p>WebView, le composant d'Android qui affiche le jeu, est fourni par Google et peut échanger avec Google pour son propre fonctionnement ; ce qu'il transmet relève de la politique de Google, pas de la nôtre ; le jeu ne lui confie aucune donnée à transmettre.</p>
   <p><strong>La régie publicitaire de Google, elle, collecte des données — mais seulement si vous lui en donnez l'occasion.</strong> Elle ne s'initialise pas au lancement du jeu. Elle s'initialise lorsque vous touchez la proposition d'obtenir un indice en regardant une annonce, et pas avant. À partir de ce moment-là, et à chaque annonce jouée, elle recueille, sous les noms qu'emploie Google Play :</p>
   <ul>
     <li><strong>Identifiants d'appareil ou autres identifiants</strong> — l'identifiant publicitaire de votre appareil et son App Set ID ;</li>
@@ -101,6 +107,7 @@
     <li><strong>l'heure depuis laquelle court le prochain indice rendu par le temps</strong> — il en revient un toutes les huit heures, jusqu'au plafond ;</li>
     <li><strong>par niveau, le numéro du dernier jour dont la grille a été finie</strong>, et combien de grilles libres vous avez ouvertes ;</li>
     <li><strong>votre jardin</strong> — le nombre de jours où vous avez fini au moins une grille, et le numéro du dernier de ces jours. C'est ce qui fait pousser la vigne de la marge ;</li>
+    <li><strong>l'endroit où vous en étiez</strong> — la page ouverte, le mot choisi et les lettres tapées — pour vous y ramener si Android a fermé l'application pendant que vous étiez ailleurs ;</li>
     <li><strong>vos réglages</strong> — les sons des gestes (coupés par défaut), l'ambiance (coupée par défaut) et les vibrations (activées par défaut), plus le fait que l'offre des sons vous a déjà été montrée une fois.</li>
   </ul>
   <p>Tout cela disparaît entièrement si vous désinstallez l'application ou si vous effacez ses données depuis les réglages d'Android. <strong>Nous n'en détenons aucune copie</strong>, et nous ne pouvons rien restaurer.</p>
@@ -124,7 +131,7 @@
   <h3>Les autorisations Android</h3>
   <p>Le jeu déclare deux autorisations pour son propre compte :</p>
   <ul>
-    <li><code>INTERNET</code> — pour la régie publicitaire seulement : charger une annonce quand vous en demandez une, et la montrer. Rien d'autre dans le jeu n'utilise le réseau ;</li>
+    <li><code>INTERNET</code> — pour la régie publicitaire : charger une annonce quand vous en demandez une, et la montrer. Le code du jeu ne s'en sert pour rien d'autre. WebView, le composant d'Android qui affiche le jeu, s'en sert aussi pour son propre compte (voir plus haut) ;</li>
     <li><code>VIBRATE</code> — pour la vibration très courte quand une lettre se pose, et la double quand un mot est accepté. Un interrupteur la coupe, dans la page « Paramètres » que l’on ouvre depuis le menu du jeu.</li>
   </ul>
   <p>La bibliothèque AdMob apporte les siennes, que nous préférons nommer plutôt que taire : <code>ACCESS_NETWORK_STATE</code> (savoir si le réseau est disponible), <code>AD_ID</code> et <code>ACCESS_ADSERVICES_*</code> (l'identifiant publicitaire et les services publicitaires d'Android), <code>WAKE_LOCK</code> et <code>FOREGROUND_SERVICE</code> (employées par Google pendant la lecture d'une annonce). Aucune de ces autorisations n'est classée « dangereuse » par Android : elles ne donnent accès ni à vos fichiers, ni à vos contacts, ni à la position de votre appareil. La position approximative que Google enregistre vient de votre adresse IP, d'aucune de ces autorisations.</p>

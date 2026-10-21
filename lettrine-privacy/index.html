@@ -57,7 +57,7 @@
 <body>
 <main>
   <h1>Lettrine — privacy and terms</h1>
-  <p class="maj">Last updated: 20 October 2026</p>
+  <p class="maj">Last updated: 21 October 2026</p>
   <p class="langue"><a href="fr.html" lang="fr" hreflang="fr">Version française</a> — the two versions say the same thing; the French one was written first.</p>
 
   <nav>
@@ -71,10 +71,14 @@
   <div class="phrase">
     <p><strong>Lettrine asks nothing of you, and we keep nothing about you.</strong>
     Everything the game remembers stays on your phone.</p>
-    <p><strong>And as long as you do not ask for an ad, nothing leaves the device.</strong>
+    <p><strong>And the game sends none of your game data.</strong>
+    Your grids, your words, your garden and your settings never leave your phone.
     Unlike many games, the ad service does not start at launch: it starts only when you touch
-    the line offering a hint in exchange for an ad. If you never touch it, Lettrine never
-    contacts the network.</p>
+    the line offering a hint in exchange for an ad. If you never touch it, it collects nothing.</p>
+    <p>One reservation, which we would rather state than hide: Lettrine is displayed through WebView,
+    an Android component supplied and updated by Google. That component may contact Google on its
+    own account, for instance to configure itself. The game hands it no data to transmit, and we
+    have no control over it.</p>
   </div>
 
   <h3>Who publishes Lettrine</h3>
@@ -82,6 +86,7 @@
 
   <h3>What Lettrine collects</h3>
   <p><strong>Fial Labs collects nothing.</strong> The game does not ask for an account, a name, an email address or a phone number. It does not request your location, contacts, photos, microphone or camera. We have installed no analytics tool, no crash reporter and no tracking code of our own.</p>
+  <p>WebView, the Android component that displays the game, is supplied by Google and may exchange data with Google for its own operation; what it transmits falls under Google's policy, not ours; the game hands it no data to transmit.</p>
   <p><strong>Google's ad service does collect data — but only if you give it the occasion.</strong> It does not initialise when the game launches. It initialises when you touch the offer to get a hint by watching an ad, and not before. From that moment, and each time an ad plays, it collects, under the names Google Play uses:</p>
   <ul>
     <li><strong>Device or other identifiers</strong> — your device's advertising identifier and its App Set ID;</li>
@@ -101,6 +106,7 @@
     <li><strong>the time from which the next time-given hint is counted</strong> — one comes back every eight hours, up to the ceiling;</li>
     <li><strong>per level, the number of the last day whose grid you finished</strong>, and how many free grids you have opened;</li>
     <li><strong>your garden</strong> — the number of days on which you finished at least one grid, and the number of the last of those days. This is what makes the vine grow in the margin;</li>
+    <li><strong>where you were</strong> — the open page, the chosen word and the letters typed — to bring you back there if Android closed the app while you were elsewhere;</li>
     <li><strong>your settings</strong> — gesture sounds (off by default), ambience (off by default) and vibration (on by default), plus the fact that the sound offer has already been shown to you once.</li>
   </ul>
   <p>All of this disappears entirely if you uninstall the app or clear its data from Android's settings. <strong>We hold no copy of it</strong>, and we cannot restore it.</p>
@@ -124,7 +130,7 @@
   <h3>Android permissions</h3>
   <p>The game declares two permissions on its own behalf:</p>
   <ul>
-    <li><code>INTERNET</code> — for the ad service only: loading an ad when you ask for one, and showing it. Nothing else in the game uses the network;</li>
+    <li><code>INTERNET</code> — for the ad service: loading an ad when you ask for one, and showing it. The game's code uses it for nothing else. WebView, the Android component that displays the game, also uses it on its own account (see above);</li>
     <li><code>VIBRATE</code> — for the very short vibration when a letter settles, and the double one when a word is accepted. A switch turns it off, on the game’s “Paramètres” (Settings) page, opened from the menu.</li>
   </ul>
   <p>The AdMob library brings its own, which we prefer to name rather than hide: <code>ACCESS_NETWORK_STATE</code> (whether the network is available), <code>AD_ID</code> and <code>ACCESS_ADSERVICES_*</code> (the advertising identifier and Android's advertising services), <code>WAKE_LOCK</code> and <code>FOREGROUND_SERVICE</code> (used by Google while an ad plays). None of these permissions is classed as “dangerous” by Android: they give access neither to your files, nor to your contacts, nor to your device's position. The approximate location Google records comes from your IP address, not from any of these permissions.</p>
